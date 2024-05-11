@@ -8,10 +8,7 @@ st.header("Dokumente teilen")
 st.write("Diese App ermöglicht dir Dokumente mit deinen Freunden zu teilen.")
 
 
-@st.cache
-def fetch_and_clean_data(url):
-    # Fetch data from URL here, and then clean it up.
-    return data
+
 
 def main():
     # Texteingabefeld für den Benutzer
