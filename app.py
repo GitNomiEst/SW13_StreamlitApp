@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-st.set_page_config(page_title="My Streamlit App")
+st.set_page_config(page_title="Sharing is caring")
 st.header("Dokumente teilen")
 st.write("Diese App ermöglicht dir Dokumente mit deinen Freunden zu teilen.")
 
