@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 import datetime
 
-API_KEY = 'your-api-key'
+API_KEY = 'bfd59cda378f3132f08aebf94451e03b'
 
 # Funktion zum Laden der Wetterdaten
 @st.cache_data
