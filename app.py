@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 import datetime
 
-API_KEY = 'bfd59cda378f3132f08aebf94451e03b'
+API_KEY = 'your-api-key'
 
 # Funktion zum Laden der Wetterdaten
 @st.cache_data
@@ -37,7 +37,7 @@ st.title("Wettervisualisierungs-App")
 
 # Stadt- und Zeitraum-Auswahl
 city = st.text_input("Geben Sie eine Stadt ein", "Berlin")
-days = st.slider("Wählen Sie die Anzahl der Tage", 1, 5, 3)
+days = st.slider("Wählen Sie die Anzahl der Tage", 1, 7, 3)
 
 # Laden der Daten
 if st.button("Daten laden"):
@@ -52,15 +52,15 @@ if st.button("Daten laden"):
         st.write(weather_data)
 
         # Temperatur-Diagramm
-        st.subheader("Temperature")
+        st.subheader("Temperature (°C)")
         st.line_chart(weather_data.set_index('Date')[['Temperature (°C)']])
 
         # Luftfeuchtigkeit-Diagramm
-        st.subheader("Humidity")
+        st.subheader("Humidity (%)")
         st.line_chart(weather_data.set_index('Date')[['Humidity (%)']])
 
         # Windgeschwindigkeit-Diagramm
-        st.subheader("Wind Speed")
+        st.subheader("Wind Speed (m/s)")
         st.line_chart(weather_data.set_index('Date')[['Wind Speed (m/s)']])
     else:
         st.error(f"Fehler beim Laden der Daten für {city}. Bitte überprüfen Sie die Stadtname und versuchen Sie es erneut.")
